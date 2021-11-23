@@ -1,0 +1,191 @@
+
+.contact-img{
+    height: 100%;
+    &> div{
+        height: 100%;
+        width: 100%;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.contact-form-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding: 80px;
+    animation: slide-up 1s forwards;
+    .contact-form-inner{
+        // width: 70%;
+        width: 90%;
+        .title{
+            display: flex;
+            justify-content: center;
+            h2{
+                font-weight: bold;
+                font-size: 90px;
+                line-height: 92px;
+                color: #312f30;
+                text-align: center;
+                background-image: url(../images/ZIGZAG.svg);
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                display: inline-block;
+                padding-bottom: 25px;
+            }
+        }
+        .contact-form{
+            .form-box{
+                margin-top: 30px;
+                .form-group{
+                    display: grid;
+                    margin-bottom: 1rem;
+                    label{
+                        font-weight: bold;
+                        font-size: 14px !important;
+                        line-height: 28px;
+                        text-transform: uppercase;
+                    }
+                    input{
+                        background: #f2f2f2;
+                        border: 1px solid #ddd;
+                        box-sizing: border-box;
+                        border-radius: 3px;
+                        height: 38px;
+                        padding: 0px 10px;
+                        font-size: 14px;
+                    }
+                    textarea{
+                        background: #F2F2F2;
+                        border: 1px solid #DDDDDD;
+                        box-sizing: border-box;
+                        border-radius: 3px;
+                        height: 140px;
+                        padding: 10px 10px;
+                        font-size: 14px;
+                    }
+                }
+                .form-submit-btn{
+                    text-align: center;
+                    margin: 30px 0px;
+                    input[type="submit"]{
+                        height: 48px;
+                        width: 208px;
+                        background-color: $darkgrey_color;
+                        color: #fff;
+                        text-decoration: none;
+                        transition: all .3s ease;
+                        border: 1px solid $darkgrey_color;
+                        border-radius: 0px;
+                        &:hover{
+                            background-color: $primary_color;
+                            border-color: $primary_color;
+                        }
+                    }
+                    Button{
+                        height: 48px;
+                        width: 208px;
+                        background-color: $darkgrey_color;
+                        color: #fff;
+                        text-decoration: none;
+                        transition: all .3s ease;
+                        border: 1px solid $darkgrey_color;
+                        border-radius: 0px;
+                        &:hover{
+                            background-color: $primary_color;
+                            border-color: $primary_color;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+// terms and policies
+.terms-wrapper{
+    padding: 100px 20%;
+    .terms-wrap-inner{
+        .title{
+            text-align: center;
+            h2{
+                margin-bottom: 20px;
+                font-weight: bold;
+                font-size: 90px;
+                line-height: 92px;
+                letter-spacing: 0.01em;
+                color: $darkgrey_color;
+            }
+        }
+        .page-content{
+            margin-top: 40px;
+            .content-title{
+                text-align: center;
+                h3{
+                    font-size: 36px;
+                    line-height: 42px;
+                    letter-spacing: 0.03em;
+                    text-transform: uppercase;
+                    color: $darkgrey_color;
+                    font-weight: $bold;
+                }
+            }
+            .content{
+                p{
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 28px;
+                    letter-spacing: 0.035em;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .terms-wrapper {
+        padding: 100px 10%;
+    }
+}
+@media screen and (min-width: 599px) and (max-width: 768px) {
+    .contact-form-wrap{
+        padding: 20px;
+        .contact-form-inner{
+            width: 100% ;
+        }
+    }
+    .terms-wrapper {
+        padding: 50px 10%;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .contact-img{
+        height: 300px;
+    }
+    .terms-wrap-inner .title{
+        h2{
+            font-size: 48px !important;
+            line-height: 50px !important;
+        }
+    }
+    .terms-wrapper {
+        padding: 50px 5%;
+    }
+    .contact-form-wrap{
+        padding: 20px;
+    }
+    .contact-form-wrap .contact-form-inner{
+        width: 90%;
+        .title{
+            h2{
+                font-size: 50px;
+                line-height: 52px;
+            }
+        }
+    }
+}

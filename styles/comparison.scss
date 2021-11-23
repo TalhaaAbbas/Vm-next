@@ -1,0 +1,72 @@
+.comparison-wrapper{
+    margin-top: 50px;
+    .comparison-wrap-inner{
+        
+        .comparison-title{
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .before-title, .after-title{
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                padding-left: 30px;
+                padding-right: 30px;
+                background: #fff;
+                h4{
+                    font-weight: $bold;
+                    font-size: 5vw;
+                    line-height: 92px;
+                    color: $darkgrey_color;
+                }
+            }
+            .before-title{
+                padding-left: 100px;
+            }
+            .after-title{
+                padding-right: 100px;
+            }
+            .line{
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 1px;
+                background: #DDDDDD;
+                line-height: 0;
+                font-size: 0;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        .comparison-slider{
+            margin-top: 40px;
+            .carousel-control-next-icon {
+                background-image:url(../images/next.svg);
+            }
+            .carousel-control-prev-icon {
+                background-image:url(../images/previous.svg);
+            }
+            .carousel-control-next, .carousel-control-prev{
+                width: 6%;
+            }
+            .comparison-slide{
+                max-height: 450px;
+                .slide-part{
+                    img{
+                        width: 100%;
+                        height: 100%;
+
+                    }
+                }
+            }
+            .carousel-indicators{
+                display: none;
+            }
+        }
+    }
+}

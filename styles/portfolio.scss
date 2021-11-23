@@ -1,0 +1,172 @@
+
+.potfolio-gallery-wrap{
+    margin: 100px 60px;
+    .gallery-wrap-inner{
+        .grid-item { 
+            width: auto; 
+            height: auto;
+            margin: 20px;
+            // max-width: 220px;
+            // max-width: 370px;
+            max-width: 30%;
+            cursor: pointer;
+            // padding: 5px;
+            box-sizing: border-box;
+            display:inline;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+            .grid-item-inner{
+                position: relative;
+                .img-content{
+                    position: absolute;
+                    top: 0px;
+                    height: 100%;
+                    width: 100%;
+                    background: #00000091;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    visibility: hidden;
+                    p{
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 26px;
+                        color: $white;
+                        text-align: center;
+                    }
+                }
+                &:hover{
+                    .img-content{
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        // .grid-item--width2 { width: 400px; }
+    }
+}
+.portfolio-modal{
+    .modal-dialog{
+        width: 100vw !important;
+        max-width: 100vw !important;
+        max-height: 100vh !important;
+        margin: 0px;
+        .modal-content{
+            height: 100vh;
+            border: none;
+            border-radius: 0px;
+        }
+        .modal-body{
+            height: 100vh !important;
+            overflow: hidden;
+            .close-modal{
+                position: absolute;
+                // background: transparent;
+                border: none;
+                font-size: 20px;
+                cursor: pointer;
+                font-weight: bold;
+                z-index: 3;
+            }
+        }
+        .carousel-control-next, .carousel-control-prev{
+            width: 4%;
+        }
+        .carousel-control-prev-icon{
+            background-image: url(../images/port-modal-back.svg);
+            width: 40px;
+            height: 40px;
+            // width: 2%;
+        }
+        .carousel-control-next-icon{
+            background-image: url(../images/port-modal-next.svg);
+            width: 40px;
+            height: 40px;
+            // width: 2%;
+        }
+    }
+    #portfolioCarousel{
+        height: 100vh;
+        .carousel-inner{
+            height: 100vh;
+            .carousel-item{
+                height: 100vh;
+                padding: 0px 70px;
+                .img-box{
+                    background: #f3f3f3;
+                    height: 75%;
+                    padding: 40px;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+                .portfolio-img-info{
+                    padding: 30px 0px;
+                    .infobox{
+                        h5{
+                            font-weight: 600;
+                            font-size: 11px;
+                            line-height: 15px;
+                            color: $primary_color;
+                        }
+                        p{
+                            font-weight: normal;
+                            font-size: 16px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+}   
+.my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+}
+  
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .portfolio-modal #portfolioCarousel .carousel-inner .carousel-item .img-box{
+        height: 60%;
+    }
+    .potfolio-gallery-wrap .gallery-wrap-inner .grid-item{
+        max-width: 43%;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 600px) {
+    .portfolio-modal #portfolioCarousel .carousel-inner .carousel-item .img-box{
+        height: 45%;
+    }
+    .potfolio-gallery-wrap {
+        margin: 100px 0px;
+    }
+    .portfolio-modal #portfolioCarousel .carousel-inner .carousel-item{
+        padding: 0px 10px !important;
+    }
+    .potfolio-gallery-wrap .gallery-wrap-inner .grid-item{
+        // max-width: 140px;
+        max-width: 160px;
+    }
+    .potfolio-gallery-wrap .gallery-wrap-inner .grid-item .grid-item-inner .img-content p{
+        font-size: 14px;
+        line-height: 16px;
+    }
+}

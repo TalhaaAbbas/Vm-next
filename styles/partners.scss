@@ -1,0 +1,32 @@
+.partners-section{
+    padding: 50px 0px;
+    .partner-inner{
+        .partner-left{
+            padding: 0px 20%;
+            h4{
+                background-image: url(../images/ZIGZAG.svg);
+                background-repeat: no-repeat;
+                background-position: left bottom;
+                border: none;
+                font-size: 70px;
+                line-height: 74px;
+                color: $darkgrey_color;
+                font-weight: $bold;
+                padding-bottom: 16px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        .partner-right{
+            display: inline-block;
+            max-height: 550px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

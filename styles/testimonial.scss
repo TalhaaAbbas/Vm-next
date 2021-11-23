@@ -1,0 +1,81 @@
+.testimonial-section{
+    // padding: 50px 0px;
+    padding-top: 50px;
+    .no-p{
+        padding: 0px;
+    }
+    .testimonial-inner{
+        width: 100%;
+        overflow: hidden;
+        .testimonials-wrap {
+            .testimonial{
+                .testimonial-img{
+                    height: 100%;
+                    div{
+                        height: 100%;
+                    }
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .testimonial-info{
+                    padding: 10% 20%;
+                    .info-inner{
+                        h3{
+                            font-size: 70px;
+                            line-height: 74px;
+                            font-weight: $bold;
+                            color: $darkgrey_color;
+                            margin-bottom: 40px;
+                        }
+                        .testimonial-qoute{
+                            position: relative;
+                            p{
+                                font-size: 24px;
+                                line-height: 30px;
+                                color: #1D1D1D;
+                                margin-top: 30px;
+                            }
+                            span{
+                                background-image: url(../images/open-qoute.svg);
+                                padding: 30px;
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                background-position: center;
+                            }
+                            .close-qoute{
+                                background-image: url(../images/close-qoute.svg);
+                                position: absolute;
+                                right: 0px;
+                            }
+                            .author-name{
+                                h5{
+                                    font-size: 22px;
+                                    color: $darkgrey_color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .carousel-indicators{
+                margin-left: 37%;
+                bottom: 10%;
+                button{
+                    height: 4px;
+                    border-radius: 5px;
+                    background-color: #AFAFAF;
+                }
+            } 
+            .carousel-indicators .active{
+                // border-bottom: 4px solid $primary_color;
+                background-color: $primary_color;
+            }
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        display: none;
+    }
+}

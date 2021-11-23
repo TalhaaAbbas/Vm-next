@@ -1,0 +1,46 @@
+.visual-market{
+    .market-wrap{
+        .title-wrap{
+            .title{
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        .market-points-list{
+            margin: 50px 0px;
+            .no-p{
+                padding: 0px;
+            }
+            .market-point{
+                margin: 10px 0px;
+                .market-img{
+                    height: 226px;
+                    width: 100%;
+                    & > div{
+                        width: 100%;
+                    }
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .market-includes{
+                    padding: 40px 30px;
+                    h5{
+                        font-size: 24px;
+                        color: $darkgrey_color;
+                        font-weight: $bold;
+                        text-align: center;
+                    }
+                    p{  
+                        font-size: 18px;
+                        line-height: 28px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

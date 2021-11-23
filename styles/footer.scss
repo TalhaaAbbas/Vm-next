@@ -1,0 +1,79 @@
+footer{
+    background-color: #312F30;
+    .footer-wrap{
+        padding: 8%;
+        .footer-content{
+            .footer-left-inner{
+                padding: 22px 10%;
+                .copywrites{
+                    margin-top: 50px;
+                    p{
+                        color: $text_color;
+                        margin-bottom: 5px;
+                        a{
+                            color: $text_color;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .footer-logo{
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+            .footer-links-wrap{
+                .footer-links-box{
+                    .link-title{
+                        h4{
+                            border-bottom: 2px solid #A8A9AD;
+                            padding-bottom: 40px;
+                            text-align: center;
+                            color: $white;
+                        }
+                    }
+                    .links{
+                        // text-align: center;
+                        padding-top: 25px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-flow: column;
+                        p{
+                            a{
+                                color:#A8A9AD;
+                                text-decoration: none;
+                                .icon{
+                                    font-size: 22px;
+                                    margin: 12px 0px;
+                                    color: #ddd;
+                                }
+                            }
+                        }
+                        .social-links{
+                            p{
+                                a{
+                                    .icon{
+                                        &:hover{
+                                            color: $primary_color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 600px){
+    .social-links{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+}

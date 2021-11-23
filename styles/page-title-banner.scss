@@ -1,0 +1,31 @@
+.standard-banner{
+    background-repeat: no-repeat;
+    .st-banner-inner{
+        padding: 8%;
+        .st-banner-content-wrap{
+            text-align: center;
+            .st-content-inner{
+                .st-content{
+                    span{
+                        font-weight: normal;
+                        font-size: 26px;
+                        line-height: 28px;
+                        color: $primary_color;
+                    }
+                    h1{
+                        font-weight: bold;
+                        font-size: 130px;
+                        line-height: 92px;
+                        color: $darkgrey_color;
+                    }
+                }
+                .st-buttons{
+                    margin-top: 80px;
+                    .secondary-button{
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

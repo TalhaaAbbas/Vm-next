@@ -1,0 +1,311 @@
+
+nav{
+    padding: 20px 90px;
+    width: 100%;
+    display: flex;
+    // position: fixed;
+    position:relative;
+    z-index: 10;
+    .logo{
+        // padding:1vh 1vw;
+        // text-align: center;
+    }
+    .logo img {
+        // height: 5rem;
+        // width: 5rem;
+    }
+    .nav-links{
+        display: flex;
+        list-style: none; 
+        padding: 0 0.7vw;
+        justify-content: flex-end;
+        align-items: center;
+        text-transform: uppercase;
+        right: 0px;
+        top: 0px;
+        width: 100%;
+        margin-bottom: 0px;
+        li, .nav-item{
+            position: relative;
+            a{
+                cursor: pointer !important;
+                padding: 0px 20px;
+                text-decoration: none;
+                text-transform: capitalize;
+                color: $darkgrey_color;
+                font-size: 16px;
+                font-weight: $semi_bold;
+                &:hover {
+                    color: $primary_color;
+                }
+                &:focus {
+                    color: $primary_color;
+                }
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 3px;
+                    width: 0%;
+                    background-color: $primary_color;
+                    position: absolute;
+                    transition: all ease-in-out 250ms;
+                    margin: 0 0 0 15%;
+                    bottom: -3px;
+                }
+                &:hover::before{
+                    width: 70%;
+                }
+            }
+            .nav-link{
+                display: initial;
+                &:after{
+                    display: none;
+                }
+            }
+            .dropdown-menu{
+                li{
+                   a{
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                   }
+                }
+            }
+            .dropdown-item{
+                // text-align: center;
+                a{
+                    padding: 5px 5px;
+                    &::before{
+                        margin: 0px !important;
+                        display: none;
+                    }
+                }
+                &:focus{
+                    background-color: #e9ecef;
+                }
+                &:hover{
+                    background-color: #e9ecef;
+                }
+                &.active{
+                    background-color: #e9ecef;
+                }
+                &::before{
+                    margin: 0px !important;
+                    display: none;
+                }
+
+            }
+            .pricing-btn{
+                &:hover {
+                    color: $primary_color;
+                }
+            }
+            .contact-btn{
+                background: transparent;
+                border: 1px solid $text_color;
+                padding: 7px 25px;
+                margin-left: 20px;
+                font-weight: $semi_bold;
+                transition: all .3s ease;
+                &:hover{
+                    background: $darkgrey_color;
+                    border-color: $darkgrey_color;
+                    color: $white;
+                }
+                &::before{
+                    display: none;
+                }
+            }
+        }
+        .admin-button{
+            height: 30px;
+            width: 30px;
+            background: transparent;
+            border-radius: 50%;
+            padding: 0px;
+            text-align: center;
+            line-height: 1.8;
+            border: 1px solid $darkgrey_color;
+            margin: 0px 10px;
+            a{
+                padding: 0px;
+                i{
+                    font-size: 20px;
+                }
+                &::before{
+                    display: none;
+                }
+            }
+            .dropdown-toggle{
+                &::after{
+                    display: none;
+                }
+            }
+            .dropdown-menu{    
+                padding: 10px;
+                li{
+                    a{
+                        &:hover{
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hamburger div{
+        width: 30px;
+        height:3px;
+        background: $primary_color;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .mbl-icons{
+        display: none;
+    }
+    .fade:not(.show){
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 992px){
+    nav{
+        // position: fixed;
+        z-index: 10;
+        padding: 20px 20px;
+    }
+    .mbl-icons{
+        display:flex !important;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        .mbl-admin-button{
+            margin-top: -15px;
+            background: transparent;
+            border: 1px solid $darkgrey_color;
+            border-radius: 50%;
+            padding: 0px;
+            height: 30px;
+            width: 30px;
+            margin-right: 10px;
+            i{
+                color: $darkgrey_color;
+            }
+            .dropdown-toggle{   
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        .hamburger{
+            cursor: pointer;
+            transform: translate(-5%, -50%);
+            z-index: 2;
+            transition: all 0.7s ease;
+        }
+    }
+    .admin-button{
+        display: none;
+    }
+    // .toggle{
+    //     position: fixed;
+    //     top: 5%;
+    // }
+    .nav-links{
+        position: fixed;
+        background: $darkgrey_color;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1500px at 50% 11%);
+        -webkit-clip-path: circle(1500px at 50% 11%);
+        // -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+        // padding: 40% 0px;
+        padding: 25% 0px;
+        justify-content: space-evenly;
+        li{
+            a{
+                color: $white;
+            }
+            .contact-btn{
+                margin-left: 0px;
+            }
+        }
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+    .dropdown-toggle{
+        position: relative;
+    }
+    nav .nav-links li a::before{
+        margin: 0 0 0 0%;
+        bottom: -5px;
+        left: 0px;
+    }
+    nav .nav-links li a:hover::before {
+        width: 100%;
+    }
+    nav .nav-links li a{
+        padding: 0px 5px;
+    }
+    .services-dropdown{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        .dropdown-menu{
+            position: initial;
+            background-color: transparent;
+            border: 1px solid transparent;
+            li{
+                a{
+                    text-align: center;
+                    font-weight: 100;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}

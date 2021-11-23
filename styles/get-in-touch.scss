@@ -1,0 +1,130 @@
+.form-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    .form-wrap-inner{
+        // width: 70%;
+        width: 50%;
+        .title{
+            display: flex;
+            justify-content: center;
+            h4{
+                font-weight: $bold;
+                font-size: 70px;
+                line-height: 92px;
+                color: $darkgrey_color;
+                text-align: center;
+                background-image: url(../images/ZIGZAG.svg);
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                display: inline-block;
+                padding-bottom: 20px;
+            }
+        }
+        .form-box{
+            margin-top: 30px;
+            .form-group{
+                display: grid;
+                label{
+                    font-weight: $bold;
+                    font-size: 14px !important;
+                    line-height: 28px;
+                    text-transform: uppercase;
+                    color: $text_color;
+                }
+                input{
+                    background: #F2F2F2;
+                    border: 1px solid #DDDDDD;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    height: 38px;
+                    padding: 0px 10px;
+                }
+            }
+            .checkbox-wrap{
+                h6{
+                    font-size: 14px;
+                    line-height: 28px;
+                    color: #5A5A5A;
+                    font-weight: $bold;
+                }
+                .form-selection{
+                    .form-checkbox{
+                        input {
+                            padding: 0;
+                            height: initial;
+                            width: initial;
+                            margin-bottom: 0;
+                            display: none;
+                            cursor: pointer;
+                        }
+                        input:checked + label:after {
+                            content: 'x';
+                            display: block;
+                            position: absolute;
+                            top: 3px;
+                            left: 5px;
+                            font-size: 13px;
+                            color: $white;
+                        }
+                        
+                        label {
+                            position: relative;
+                            cursor: pointer;
+                            color: $text_color;
+                            font-weight: normal;
+                        }
+                        
+                        label:before {
+                            content:'';
+                            -webkit-appearance: none;
+                            background-color: transparent;
+                            border: 1px solid #767676;
+                            // box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+                            // padding: 10px;
+                            display: inline-block;
+                            position: relative;
+                            vertical-align: middle;
+                            cursor: pointer;
+                            margin-right: 10px;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 3px;
+                            // margin-top: -5px;
+                        }
+                        input:checked + label:before{
+                            background-color: #312F30;
+                            border-color: #1D1D1D;
+                        }
+                        
+                        
+                    }
+                }
+            }
+        }
+        .form-submit-btn{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            input, a{
+                // padding: 12px 5%;
+                height: 48px;
+                width: 208px;
+                background-color: $darkgrey_color;
+                color:$white;
+                text-decoration: none;
+                transition: $ease_transition;
+                border: 1px solid $darkgrey_color;
+                border-radius: 0px;
+                &:hover{
+                    color: $white;
+                    background-color: $primary_color;
+                    text-decoration: none;
+                    box-shadow: $button_hover;
+                    border-color: $primary_color;
+                }
+            }
+        }
+    }
+}

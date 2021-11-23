@@ -1,0 +1,40 @@
+.include-wraper{
+    .include-img{
+        // padding: 15% 2%;
+        padding: 20% 2%;
+        background: #f3f3f3;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .include-info{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        .include-info-inner{
+            padding: 0px 20%;
+            span{
+                font-weight: normal;
+                font-size: 34px;
+                line-height: 28px;
+                color: $primary_color;
+                font-style: italic;
+            }
+            h3{
+                font-weight: $bold;
+                font-size: 70px;
+                line-height: 92px;
+                color: $darkgrey_color;
+            }
+            p{
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 28px;
+                color: $darkgrey_color;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.services-section{
+    .services-inner{
+        padding: 50px 0px;
+        .images-tab-wrapper{
+            margin: 60px 0px;
+            .no-p{
+                padding: 0px;
+            }
+            .nav {
+                border-top: 1px solid #ddd;
+                border-bottom: 1px solid #ddd;
+                .nav-link{
+                    background-color: transparent;
+                    box-shadow: none !important;
+                    color: $light_text;
+                    font-weight: normal ;
+                    text-transform: capitalize !important;
+                    border-bottom: 1px solid #ddd !important;
+                    display: flex;
+                    // justify-content: space-between;
+                    align-items: center;
+                    position: relative;
+                    margin: 0px !important;
+                    // padding: 1.1rem!important;
+                    padding: 16.7px 20px !important;
+                    border-radius: 0px;
+                    cursor: pointer;
+                    p{
+                        font-weight: $bold;
+                        margin-bottom: 0px;
+                        margin-left: 20px;
+                        font-size: 20px;
+                    }
+                    span{
+                        font-size: 24px;
+                    }
+                    .arrow-icon{
+                        position:absolute;
+                        right: 25px;
+                        font-size: 16px;
+                        transition: all .3s ease;
+                    }
+                    &.active{
+                        background-color: #F2F2F2;
+                        .arrow-icon{
+                            color: $primary_color;
+                        }
+                        p{
+                            color: $darkgrey_color;
+                        }
+                    }
+                    &:hover{
+                        background-color: #F2F2F2;
+                        .arrow-icon{
+                            color: $primary_color;
+                            right: 15px;
+                        }
+                        p{
+                            color: $darkgrey_color;
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: 0px;
+                    }
+                }
+            }
+            .tab-content{
+                .tab-pane{
+                    padding: 0px !important;
+                    .tab-img{
+                        max-height: 565px;
+                        overflow: hidden;
+
+                        div{
+                            width:100%;
+                        }
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
